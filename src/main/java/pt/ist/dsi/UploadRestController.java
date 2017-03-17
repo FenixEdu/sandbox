@@ -21,6 +21,13 @@ public class UploadRestController {
 
     Logger logger = LoggerFactory.getLogger(UploadRestController.class);
 
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello";
+    }
+
+
+
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> upload(@RequestPart("file") MultipartFile file, @RequestPart("data") DataBean dataBean) {
         try {
