@@ -26,6 +26,11 @@ public class UploadRestController {
         return "hello";
     }
 
+    @GetMapping("/goodbye")
+    public String goodbye() {
+        return "goodbye";
+    }
+
 
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
