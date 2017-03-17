@@ -5,13 +5,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.Set;
 
 /**
  * Created by Sérgio Silva (hello@fenixedu.org).
@@ -34,8 +32,18 @@ public class UploadRestController {
         return ResponseEntity.ok().build();
     }
 
+    @PostMapping(value = "/json", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String onlyJson(@RequestBody DataBean bean) {
+        return bean.toString();
+    }
+
     public static class DataBean {
 
+        private enum Type {
+            READ, WRITE;
+        }
+
+        private Set<Type> types;
         private String title;
         private String name;
 
@@ -45,6 +53,14 @@ public class UploadRestController {
         public DataBean(String title, String name) {
             this.title = title;
             this.name = name;
+        }
+
+        public Set<Type> getTypes() {
+            return types;
+        }
+
+        public void setTypes(Set<Type> types) {
+            this.types = types;
         }
 
         public String getTitle() {
@@ -66,7 +82,8 @@ public class UploadRestController {
         @Override
         public String toString() {
             return "DataBean{" +
-                    "title='" + title + '\'' +
+                    "types=" + types +
+                    ", title='" + title + '\'' +
                     ", name='" + name + '\'' +
                     '}';
         }
