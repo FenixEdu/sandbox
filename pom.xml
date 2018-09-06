@@ -4,7 +4,7 @@
 
 	<groupId>pt.ist.dsi</groupId>
 	<artifactId>upload-with-json-demo</artifactId>
-	<version>0.0.2</version>
+	<version>0.1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>upload-with-json-demo</name>
@@ -14,7 +14,7 @@
 		<connection>scm:git:git@github.com:fenixedu-buildbot/sandbox.git</connection>
 		<developerConnection>scm:git:git@github.com:fenixedu-buildbot/sandbox.git</developerConnection>
 		<url>http://fenixedu.org</url>
-		<tag>v0.0.2</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<parent>
