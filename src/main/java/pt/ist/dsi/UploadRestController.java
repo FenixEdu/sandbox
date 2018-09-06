@@ -40,6 +40,7 @@ public class UploadRestController {
             logger.info("data bean {}", dataBean.toString());
         } catch (IOException e) {
             e.printStackTrace();
+            e.printStackTrace();
         }
         return ResponseEntity.ok().build();
     }
