@@ -36,6 +36,11 @@ public class UploadRestController {
         return "hello gitlab ci";
     }
 
+    @GetMapping("/github")
+    public String github() {
+        return "hello github";
+    }
+
 
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
