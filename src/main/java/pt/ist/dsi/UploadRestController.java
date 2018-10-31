@@ -32,8 +32,8 @@ public class UploadRestController {
     }
 
     @GetMapping("/gitlab")
-    public String goodbye() {
-        return "hello gitlab";
+    public String gitlab() {
+        return "hello gitlab ci";
     }
 
 
