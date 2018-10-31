@@ -1,3 +1,6 @@
+[![pipeline status](https://repo.dsi.tecnico.ulisboa.pt/FenixEdu/sandbox/badges/master/pipeline.svg)](https://repo.dsi.tecnico.ulisboa.pt/FenixEdu/sandbox/commits/master)
+
+
 # Upload multipart/form-data with File and JSON part
 
 Run with ```mvn spring-boot:run```
