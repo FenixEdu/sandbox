@@ -10,12 +10,12 @@
 	<name>upload-with-json-demo</name>
 	<description>Demo project for Spring Boot</description>
 
-	<scm>
+	<!--<scm>
 		<connection>scm:git:git@github.com:fenixedu-buildbot/sandbox.git</connection>
 		<developerConnection>scm:git:git@github.com:fenixedu-buildbot/sandbox.git</developerConnection>
 		<url>http://fenixedu.org</url>
 		<tag>HEAD</tag>
-	</scm>
+	</scm>-->
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
